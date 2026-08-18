@@ -5,33 +5,33 @@
 # keep the application name and short name the same or different for dev and prod build
 # or some migration logic will behave differently for each build
 if(NEXTCLOUD_DEV)
-    set( APPLICATION_NAME       "Chili ClouDev" )
-    set( APPLICATION_SHORTNAME  "Chili CloudDev" )
-    set( APPLICATION_EXECUTABLE "Chili CloudDev" )
-    set( APPLICATION_ICON_NAME  "Chili Cloud" )
+    set( APPLICATION_NAME       "NextcloudDev" )
+    set( APPLICATION_SHORTNAME  "NextcloudDev" )
+    set( APPLICATION_EXECUTABLE "nextclouddev" )
+    set( APPLICATION_ICON_NAME  "Nextcloud" )
 else()
-    set( APPLICATION_NAME       "Chili Cloud" )
-    set( APPLICATION_SHORTNAME  "Chili Cloud" )
-    set( APPLICATION_EXECUTABLE "Chili Cloud" )
+    set( APPLICATION_NAME       "Nextcloud" )
+    set( APPLICATION_SHORTNAME  "Nextcloud" )
+    set( APPLICATION_EXECUTABLE "nextcloud" )
     set( APPLICATION_ICON_NAME  "${APPLICATION_SHORTNAME}" )
 endif()
 
 set( APPLICATION_CONFIG_NAME "${APPLICATION_EXECUTABLE}" )
-set( APPLICATION_DOMAIN     "chilisecurity.com" )
-set( APPLICATION_VENDOR     "Chili Security ApS" )
+set( APPLICATION_DOMAIN     "nextcloud.com" )
+set( APPLICATION_VENDOR     "Nextcloud GmbH" )
 set( APPLICATION_UPDATE_URL "https://updates.nextcloud.org/client/" CACHE STRING "URL for updater" )
-set( APPLICATION_HELP_URL   "https://www.chilisecurity.dk/support" CACHE STRING "URL for the help menu" )
+set( APPLICATION_HELP_URL   "" CACHE STRING "URL for the help menu" )
 
 set( APPLICATION_ICON_SET   "SVG" )
-set( APPLICATION_SERVER_URL "https://nc.streetfooddistrict.dk/" CACHE STRING "URL for the server to use. If entered, the UI field will be pre-filled with it" )
+set( APPLICATION_SERVER_URL "" CACHE STRING "URL for the server to use. If entered, the UI field will be pre-filled with it" )
 set( APPLICATION_SERVER_URL_ENFORCE ON ) # If set and APPLICATION_SERVER_URL is defined, the server can only connect to the pre-defined URL
-set( APPLICATION_REV_DOMAIN "com.chilisecurity.chilicloud" )
-set( DEVELOPMENT_TEAM "" CACHE STRING "Apple Development Team ID" )
-set( APPLICATION_VIRTUALFILE_SUFFIX "Chili Cloud" CACHE STRING "Virtual file suffix (not including the .)")
+set( APPLICATION_REV_DOMAIN "com.nextcloud.desktopclient" )
+set( DEVELOPMENT_TEAM "NKUJUXUJ3B" CACHE STRING "Apple Development Team ID" )
+set( APPLICATION_VIRTUALFILE_SUFFIX "nextcloud" CACHE STRING "Virtual file suffix (not including the .)")
 set( APPLICATION_OCSP_STAPLING_ENABLED OFF )
 set( APPLICATION_FORBID_BAD_SSL OFF )
 
-set( LINUX_PACKAGE_SHORTNAME "Chili Cloud" )
+set( LINUX_PACKAGE_SHORTNAME "nextcloud" )
 set( LINUX_APPLICATION_ID "${APPLICATION_REV_DOMAIN}.${LINUX_PACKAGE_SHORTNAME}")
 
 set( THEME_CLASS            "NextcloudTheme" )
@@ -50,14 +50,14 @@ option( WITH_PROVIDERS "Build with providers list" ON )
 option( ENFORCE_VIRTUAL_FILES_SYNC_FOLDER "Enforce use of virtual files sync folder when available" OFF )
 option( DISABLE_VIRTUAL_FILES_SYNC_FOLDER "Disable use of virtual files sync folder even when available" OFF )
 
-option(ENFORCE_SINGLE_ACCOUNT "Enforce use of a single account in desktop client" On)
+option(ENFORCE_SINGLE_ACCOUNT "Enforce use of a single account in desktop client" OFF)
 
 option( DO_NOT_USE_PROXY "Do not use system wide proxy, instead always do a direct connection to server" OFF )
 
 option( WIN_DISABLE_USERNAME_PREFILL "Do not prefill the Windows user name when creating a new account" OFF )
 
 ## Theming options
-set(NEXTCLOUD_BACKGROUND_COLOR "#bb163b" CACHE STRING "Default Chili background color")
+set(NEXTCLOUD_BACKGROUND_COLOR "#0082c9" CACHE STRING "Default Nextcloud background color")
 set( APPLICATION_WIZARD_HEADER_BACKGROUND_COLOR ${NEXTCLOUD_BACKGROUND_COLOR} CACHE STRING "Hex color of the wizard header background")
 set( APPLICATION_WIZARD_HEADER_TITLE_COLOR "#ffffff" CACHE STRING "Hex color of the text in the wizard header")
 option( APPLICATION_WIZARD_USE_CUSTOM_LOGO "Use the logo from ':/client/theme/colored/wizard_logo.(png|svg)' else the default application icon is used" ON )
